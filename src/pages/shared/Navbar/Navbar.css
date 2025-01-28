@@ -1,0 +1,23 @@
+a.active {
+	color: #1411da;
+    
+}
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+   padding: 20px 100px 20px 100px;
+     background-color: #002B44;
+    /* color: #fff; */ 
+    
+    text-align: center;
+    z-index: 100; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar{
+    padding:  0 20px 0 20px;
+  }
+}
