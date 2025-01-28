@@ -26,19 +26,19 @@ const DeliveryMenCard = ({deliveryMen}) => {
 
 
 
-      <div className="md:w-3/4 mx-auto card bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 shadow-lg rounded-2xl overflow-hidden hover:scale-105 transform duration-300 hover:shadow-2xl">
+      <div className=" card bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 shadow-lg rounded-2xl overflow-hidden hover:scale-105 transform duration-300 hover:shadow-2xl">
   <figure className="px-6 pt-6">
     <img
       src={image}
       alt="DeliverManPhoto"
-      className="rounded-lg w-full h-56 object-cover shadow-md "
+      className="rounded-lg w-full h-[400px] object-cover shadow-md "
     />
   </figure>
   <div className="card-body bg-white text-center p-6 rounded-b-2xl">
     <h2 className="card-title text-xl font-semibold text-gray-800">
-      {name}
+      Name: {name}
     </h2>
-    <p className="text-sm text-gray-600 mt-2">Delivered: {parcelCount}</p>
+    <p className="text-xl text-left text-gray-600 mt-2">Delivered: {parcelCount}</p>
     <div className="card-actions mt-4">
       <h2 className="text-lg font-medium text-blue-600">
         Average Rating: {averageRating.toFixed(1)}/5

@@ -345,7 +345,7 @@ const Home = () => {
 					<div className="grid grid-cols-1 md:grid-cols-3 ">
 						<div className="text-center md:border-r">
 							<p className="text-center text-4xl mb-2 font-bold text-blue-700 lg:text-5xl xl:text-6xl">
-							<CountUp  start={0} end={parcels.length} duraation={2}   useEasing={true}/>
+							<CountUp  start={0} end={parcels.length} duraation={2}  />
 							</p>
 							<p className="text-center text-sm font-medium tracking-widest text-gray-800 lg:text-base uppercase">
 								Parcels Booked
@@ -361,7 +361,7 @@ const Home = () => {
 						</div>
 						<div className="text-center md:border-r">
 							<p className="text-center text-4xl mb-2 font-bold text-blue-700 lg:text-5xl xl:text-6xl">
-							<CountUp end = {users.length}duraation={2}/>
+							<CountUp end = {users.length} duraation={2}/>
 							</p>
 							<p className="text-center text-sm font-medium tracking-widest text-gray-800 lg:text-base uppercase">
 								Clients
