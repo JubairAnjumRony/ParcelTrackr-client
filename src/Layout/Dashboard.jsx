@@ -5,6 +5,8 @@ import useAdmin from "../hooks/useAdmin";
 import useAuth from "../hooks/useAuth";
 import useDeliveryMen from "../hooks/useDeliveryMen";
 import { RxAvatar } from "react-icons/rx";
+import { TbTruckDelivery } from "react-icons/tb";
+import { GoCodeReview } from "react-icons/go";
 
 const Dashboard = () => {
 	const { user } = useAuth();
@@ -52,13 +54,13 @@ const Dashboard = () => {
 						<>
 							<li>
 								<NavLink to="/dashboard/myDelivery">
-									
+								<TbTruckDelivery className="text-2xl"/>
 									My Delivery
 								</NavLink>
 							</li>
 							<li>
 								<NavLink to="/dashboard/myReviews">
-                               
+								<GoCodeReview className="text-2xl" />
 									My Reviews
 								</NavLink>
 							</li>
