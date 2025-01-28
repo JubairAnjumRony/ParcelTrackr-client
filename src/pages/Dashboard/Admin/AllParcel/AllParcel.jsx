@@ -63,7 +63,7 @@ const AllParcel = () => {
                         showConfirmButton: false,
                         timer: 1500,
                     });
-                    // refetch();
+                    refetch();
                 }
             })
             .catch((error) => {

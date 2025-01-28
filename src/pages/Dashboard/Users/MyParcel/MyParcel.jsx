@@ -224,7 +224,7 @@ const MyPercel = () => {
 
                       {/* deliveryman Id */}
                          <h2 className="block text-lg font-medium text-gray-700 mb-2">Delivery Men ID</h2>
-                         <input {...register('deliveryMenId',{required:false})} type="text" defaultValue={selectedDeliveryMenId} readOnly
+                         <input {...register('deliveryMenId',{required:true})} type="text" defaultValue={selectedDeliveryMenId} readOnly
                          
                          className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-6 bg-gray-100 text-gray-800"
                          /><br /> 
