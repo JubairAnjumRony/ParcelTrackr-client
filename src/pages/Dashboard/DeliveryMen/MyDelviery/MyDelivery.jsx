@@ -33,12 +33,11 @@ const axiosSecure = useAxiosSecure();
  
  const handleSeeLocation = (latitude, longitude) => {
    setSelectedLocation( {latitude, longitude} );
-   console.log("Latitude:", latitude, "Longitude:", longitude); // Debug
+  //  console.log("Latitude:", latitude, "Longitude:", longitude);
      setShowModal(true);
  };
   
- console.log("Selected Location:", selectedLocation); // Debug
-  console.log("Show Modal:", showModal); // Debug
+
 
 
   // Fetch assigned parcels for the logged-in deliveryman
@@ -46,7 +45,7 @@ const axiosSecure = useAxiosSecure();
     queryKey:['deliveryListsParcel'],
     queryFn: async ()=>{
         const res = await axiosSecure.get(`/myDeliveryList?email=${user.email}`);
-        console.log(res.data)
+        // console.log(res.data)
         return res.data;
     }
 })

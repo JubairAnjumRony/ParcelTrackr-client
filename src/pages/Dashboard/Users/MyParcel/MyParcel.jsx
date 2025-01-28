@@ -52,7 +52,7 @@ const MyPercel = () => {
 		const feedbackInfo={user_name:data.user_name, user_image:data.user_image,
 		rating:parseInt(data.rating),feedback:data.feedback,deliveryMenId:data.deliveryMenId, feedbackDate}
 		const result = await axiosPublic.post('/feedback',feedbackInfo);
-		console.log(result)
+		// console.log(result)
 		if(result.data.insertedId){
 			Swal.fire({
 				position: "top-right",

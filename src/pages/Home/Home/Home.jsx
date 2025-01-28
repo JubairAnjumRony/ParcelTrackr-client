@@ -11,13 +11,13 @@ const Home = () => {
 		return <div>Loading...</div>; // Or a loading spinner
 	}
 	
-	console.log(users);
+	// console.log(users);
 	const [parcels] = useParcels();
 	if (!parcels) {
 		return <div>Loading...</div>; // Or a loading spinner
 	}
 	
-	console.log(parcels);
+	// console.log(parcels);
 	const deliveredParcels =parcels.filter((parcel)=>parcel.status ==='Delivered');
 	return (
 		<div className="mb-0">

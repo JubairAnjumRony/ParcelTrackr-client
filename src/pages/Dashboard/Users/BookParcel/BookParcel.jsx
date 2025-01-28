@@ -59,7 +59,7 @@ const BookParcel = () => {
 			price: parcelPrice,
 			status: "pending",
 		};
-        console.log(parcelData);
+        // console.log(parcelData);
 
 		axiosPublic
 			.post("/parcels", parcelData)

@@ -7,7 +7,7 @@ An advanced and dynamic Parcel Management System built using the MERN stack. Thi
 
 ## Admin Credentials
 - **Username:** admin5@gmail.com
-- **Password:** ********
+- **Password:** admin5#Ache
 
 ---
 

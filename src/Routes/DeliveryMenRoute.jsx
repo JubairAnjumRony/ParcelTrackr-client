@@ -6,7 +6,7 @@ import useDeliveryMen from "../hooks/useDeliveryMen";
 const DeliveryMenRoute = ( {children}) => {
     const { user, loading } = useAuth();
 	const [isDeliveryMen, isDeliveryMenLoading] = useDeliveryMen();
-	console.log(isDeliveryMen);
+	// console.log(isDeliveryMen);
 	const location = useLocation();
 	if (loading || isDeliveryMenLoading) {
 		return <progress className="progress w-56"></progress>;

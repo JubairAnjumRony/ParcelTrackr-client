@@ -6,12 +6,12 @@ import ReviewCard from "./ReviewCard";
 const MyReviews = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
-    console.log(user.email);
+    // console.log(user.email);
     const { data: myReviews=[], refetch } = useQuery({
       queryKey:['reviews'],
       queryFn: async()=>{
           const res = await axiosSecure.get(`/feedback?email=${user?.email}`)
-          console.log(res.data)
+          // console.log(res.data)
           return res.data;
       }
   })

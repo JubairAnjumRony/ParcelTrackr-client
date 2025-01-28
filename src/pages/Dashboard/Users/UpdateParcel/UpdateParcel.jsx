@@ -51,10 +51,10 @@ reset,
 
 	const onSubmit = (data) => {
 		setLoading(true);
-		console.log(typeof data.parcelWeight);
-		console.log(typeof data.receiverPhoneNumber);
-		console.log(typeof data.deliveryAddressLatitude);
-		console.log(typeof data.deliveryAddressLongitude);
+		// console.log(typeof data.parcelWeight);
+		// console.log(typeof data.receiverPhoneNumber);
+		// console.log(typeof data.deliveryAddressLatitude);
+		// console.log(typeof data.deliveryAddressLongitude);
 
 		const parcelData = {
 			...data,
@@ -69,7 +69,7 @@ reset,
 			price: parcelPrice,
 			status: "pending",
 		};
-		console.log(parcelData);
+		// console.log(parcelData);
 
 		axiosPublic
 			.patch(`/parcels/${_id}`, parcelData)

@@ -22,7 +22,7 @@ const CheckoutForm = () => {
      const [, refetch] = useMyParcels();
     const navigate = useNavigate();
     const {price} = useLoaderData();
-    console.log(price);
+    // console.log(price);
     
 
     // const totalPrice = cart.reduce((total, item) => total + item.price, 0)
@@ -31,7 +31,7 @@ const CheckoutForm = () => {
         if (price > 0) {
             axiosSecure.post('/create-payment-intent', {price:price} )
                 .then(res => {
-                    console.log(res.data.clientSecret);
+                    // console.log(res.data.clientSecret);
                     setClientSecret(res.data.clientSecret);
                 })
         }
@@ -58,11 +58,11 @@ const CheckoutForm = () => {
         })
 
         if (error) {
-            console.log('payment error', error);
+            // console.log('payment error', error);
             setError(error.message);
         }
         else {
-            console.log('payment method', paymentMethod)
+            // console.log('payment method', paymentMethod)
             setError('');
         }
 
@@ -81,9 +81,9 @@ const CheckoutForm = () => {
             console.log('confirm error')
         }
         else {
-            console.log('payment intent', paymentIntent)
+            // console.log('payment intent', paymentIntent)
             if (paymentIntent.status === 'succeeded') {
-                console.log('transaction id', paymentIntent.id);
+                // console.log('transaction id', paymentIntent.id);
                 setTransactionId(paymentIntent.id);
 
                 // setPaymentSuccess(true); 
@@ -100,7 +100,7 @@ const CheckoutForm = () => {
                 }
 
                 const res = await axiosSecure.post('/payments', payment);
-                console.log('payment saved', res.data);
+                // console.log('payment saved', res.data);
                 refetch();
                 if (res.data?.paymentResult?.insertedId) {
                     // setPaymentSuccess(true); 

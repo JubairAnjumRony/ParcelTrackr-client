@@ -4,7 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 const DeliveryMenCard = ({deliveryMen}) => {
     const { image, name, parcelCount, averageRating} = deliveryMen;
     const {user} =useAuth();
-    console.log(user);
+    // console.log(user);
     return (
         <div className="card bg-base-100 shadow-xl rounded-md">
         <figure className="px-10 pt-10">

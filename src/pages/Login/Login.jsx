@@ -70,7 +70,7 @@ try {
     // Perform sign-in
     const result = await signIn(email, password);
     const user = result.user;
-    console.log(user);
+    // console.log(user);
 
     // Update profile with name and photoURL
     // if (name || photoURL) {

@@ -12,7 +12,7 @@ const Statistics = () => {
         queryKey: ['chart'],
         queryFn: async () => {
             const res = await axiosSecure.get('/chartData');
-            console.log(res.data);
+            // console.log(res.data);
             return res.data;
         }
     });

@@ -94,10 +94,10 @@ const AllParcel = () => {
         const formattedStartDate = startDate ? moment(startDate).format("YYYY-MM-DD") : '';
          const formattedEndDate = endDate ? moment(endDate).format("YYYY-MM-DD") : '';
           
-          console.log(formattedEndDate);
+        //   console.log(formattedEndDate);
           const result = await axiosSecure.get(`/allParcels?startDate=${formattedStartDate}&endDate=${formattedEndDate}`);
           // refetch(result.data);
-          console.log(result);
+        //   console.log(result);
           setAllParcels(result.data);
         } catch (error) {
           console.error('Error fetching parcels:', error);
