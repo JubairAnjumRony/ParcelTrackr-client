@@ -23,6 +23,7 @@ import AdminRoute from "./AdminRoute";
 import DeliveryMenRoute from "./DeliveryMenRoute";
 import Payment from "../pages/Dashboard/Users/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/Users/Payment/PaymentHistory";
+import QuesAns from "../pages/Notification/QuesAns";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path:'notification',
+            element:<QuesAns></QuesAns>
         },
        
         {
