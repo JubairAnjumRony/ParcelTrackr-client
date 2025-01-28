@@ -3,6 +3,7 @@ import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Confetti from 'react-confetti'
 import { useWindowSize } from "react-use";
+import { Helmet } from "react-helmet-async";
 
 const PaymentHistory = () => {
     const { user } = useAuth();
@@ -18,6 +19,10 @@ const PaymentHistory = () => {
 
     return (
         <div>
+
+          <Helmet>
+						 <title>Dashboard || Payment hostory</title>
+					 </Helmet>
                     {<Confetti width={width} height={height} />}
             <h2 className="text3-xl">Total Payments: {payments.length}</h2>
             <div className="overflow-x-auto">
