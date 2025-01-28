@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 import ReactApexChart from 'react-apexcharts';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -60,9 +61,15 @@ const Statistics = () => {
     };
 
     return (
+        <>
+         <Helmet>
+                <title>Dashboard | Statistics</title>
+            </Helmet>
         <div className="w-full h-full p-4">
             <ReactApexChart options={options} series={series} type="bar" height={400} />
         </div>
+
+        </>
     );
 };
 

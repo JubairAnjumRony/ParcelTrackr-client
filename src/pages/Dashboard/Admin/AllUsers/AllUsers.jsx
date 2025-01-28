@@ -5,6 +5,7 @@ import { FaUsers } from "react-icons/fa";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useUsers from "../../../../hooks/useUsers";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -69,6 +70,10 @@ const AllUsers = () => {
 	
 	return (
 		<div>
+
+			 <Helmet>
+							<title>Dashboard || Allusers</title>
+						</Helmet>
 			<div className="flex justify-evenly my-4">
 				<h2 className="text-3xl">All Users</h2>
 				<h2 className="text-3xl">Total Users: {users.length} </h2>
