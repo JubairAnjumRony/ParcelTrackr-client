@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useMyParcels from "../../../../hooks/useMyParcels";
 import useUsers from "../../../../hooks/useUsers";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 
 const AllDeliveryMen = () => {
@@ -22,6 +23,9 @@ const AllDeliveryMen = () => {
 
   return (
     <div>
+       <Helmet>
+                <title>Dashboard || AllDeliveryMan</title>
+            </Helmet>
       <h2 className="text-4xl">Total Delivery Men: {deliveryMen.length}</h2>
 
       <div className="overflow-x-auto">
