@@ -182,10 +182,15 @@ const MyPercel = () => {
             {/* Open the modal using document.getElementById('ID').showModal() method */} 
 			 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                  <div className="modal-box">
-                     <form onSubmit={handleSubmit(onSubmit)}>
-                         <h2 className="font-bold text-lg py-4">User Name</h2>
-                         <input {...register('user_name',{required:true})} type="text" defaultValue={user.displayName} readOnly /><br />
-                         <h2 className="font-bold text-lg py-4">User Image</h2>
+                     <form onSubmit={handleSubmit(onSubmit)}
+                        className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto"
+                     >
+                         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">User Name</h2>
+                         <input {...register('user_name',{required:true})} type="text" defaultValue={user.displayName} readOnly
+                         
+                          className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-gray-100 text-gray-800"
+                         /><br />
+                         <h2 className="block text-lg font-medium text-gray-700 mb-2">User Image</h2>
                          <input {...register('user_image',{required:true})} type="text" readOnly defaultValue={user.photoURL}/><br />
                          <h2 className="font-bold text-lg py-4">Ratings</h2>
                          <select name="" id="" {...register('rating',{required:true})}>
@@ -205,7 +210,7 @@ const MyPercel = () => {
                      <form method="dialog">
                          {/* if there is a button in form, it will close the modal */}
                          <button className="btn">Close</button>
-                     </form>
+                     </form> 
                      </div>
                  </div>
                  </dialog>
