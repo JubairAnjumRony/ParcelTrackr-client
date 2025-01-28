@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import ReviewCard from "./ReviewCard";
+import { Helmet } from "react-helmet-async";
 
 const MyReviews = () => {
     const axiosSecure = useAxiosSecure();
@@ -16,11 +17,18 @@ const MyReviews = () => {
       }
   })
       return (
+        <>
+        <Helmet>
+						 <title>Dashboard || MyReview</title>
+					 </Helmet>
+
          <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
           {
             myReviews.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
           }
          </div>
+
+         </>
       );
   };
   

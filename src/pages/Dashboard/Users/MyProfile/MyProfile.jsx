@@ -138,6 +138,7 @@ import { MdOutlineEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -194,6 +195,10 @@ const Profile = () => {
   };
 
   return (
+    <>
+    <Helmet>
+						 <title>Dashboard || MyProfile</title>
+					 </Helmet>
     <div className="text-center bg-slate-200 min-h-screen">
       <h1 className="text-4xl text-sky-500 mb-8">My Profile</h1>
 
@@ -252,6 +257,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
