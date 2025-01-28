@@ -4,6 +4,7 @@ import useAdmin from "../hooks/useAdmin";
 
 import useAuth from "../hooks/useAuth";
 import useDeliveryMen from "../hooks/useDeliveryMen";
+import { RxAvatar } from "react-icons/rx";
 
 const Dashboard = () => {
 	const { user } = useAuth();
@@ -79,7 +80,7 @@ const Dashboard = () => {
 
 							<li>
 								<NavLink to="/dashboard/myProfile">
-								
+								<RxAvatar className="text-2xl" />
 									My Profile
 								</NavLink>
 							</li>
