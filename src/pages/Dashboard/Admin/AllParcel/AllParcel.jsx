@@ -6,6 +6,7 @@ import useUsers from "../../../../hooks/useUsers";
 import useParcels from "../../../../hooks/useParcel";
 import moment from "moment";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const AllParcel = () => {
     const axiosPublic = useAxiosPublic();
@@ -112,6 +113,10 @@ const AllParcel = () => {
 
     return (
         <div>
+
+             <Helmet>
+                            <title>Dashboard || AllParcels</title>
+                        </Helmet>
             <h2 className="text-3xl mb-10">All Parcels: {parcels.length}</h2>
 
 

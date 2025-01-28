@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { MdOutlineRateReview } from "react-icons/md";
 import { useState } from "react";
 import useAuth from "../../../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const MyPercel = () => {
@@ -74,7 +75,10 @@ const MyPercel = () => {
 
     return (
         
-          
+        <>
+          <Helmet>
+						 <title>Dashboard || MyParcels</title>
+					 </Helmet>
         <div className="p-4 bg-gray-50 min-h-screen">
         {/* Filter Dropdown */}
         <div className="mb-4">
@@ -241,6 +245,8 @@ const MyPercel = () => {
       </div>
 
       </div>
+
+      </>
     )
             
        

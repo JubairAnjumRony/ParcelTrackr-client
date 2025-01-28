@@ -5,6 +5,7 @@ import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 import useAuth from "../../../../hooks/useAuth";
 import { useState } from "react";
 import moment from "moment";
+import { Helmet } from "react-helmet-async";
 // import Moment from "react-moment";
 
 
@@ -90,6 +91,11 @@ const BookParcel = () => {
 	};
 
 	return (
+		  
+        <>
+		<Helmet>
+						 <title>Dashboard || BookParcel</title>
+					 </Helmet>
 		<div className="lg:w-3/4 mx-auto mt-5 mb-10">
 			<h2 className="font-mercellus text-4xl mb-4">Book a Parcel</h2>
 			<form onSubmit={handleSubmit(onSubmit)}>
@@ -304,6 +310,7 @@ const BookParcel = () => {
 				</div>
 			</form>
 		</div>
+		</>
 	);
 };
 
