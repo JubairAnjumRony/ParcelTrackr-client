@@ -183,28 +183,51 @@ const MyPercel = () => {
 			 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                  <div className="modal-box">
                      <form onSubmit={handleSubmit(onSubmit)}
-                        className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto"
+                        className="bg-white p-3 rounded-lg shadow-lg max-w-md mx-auto overflow-y-hidden"
                      >
-                         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">User Name</h2>
+                         <h2 className="text-2xl font-bold text-gray-800 mb-2 text-left">User Name</h2>
                          <input {...register('user_name',{required:true})} type="text" defaultValue={user.displayName} readOnly
                          
                           className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-gray-100 text-gray-800"
                          /><br />
+
+                       {/* user image */}
                          <h2 className="block text-lg font-medium text-gray-700 mb-2">User Image</h2>
-                         <input {...register('user_image',{required:true})} type="text" readOnly defaultValue={user.photoURL}/><br />
+                         <input {...register('user_image',{required:true})} type="text" readOnly defaultValue={user.photoURL}
+                         
+                          className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-gray-100 text-gray-800"
+                         /><br />
+
+                         {/* ratings */}
                          <h2 className="font-bold text-lg py-4">Ratings</h2>
-                         <select name="" id="" {...register('rating',{required:true})}>
+                         <select name="" id="" {...register('rating',{required:true})}
+                         
+                          className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-white text-gray-800"
+                         >
                              <option value="1">1</option>
                              <option value="2">2</option>
                              <option value="3">3</option>
                              <option value="4">4</option>
                              <option value="5">5</option>          
                          </select>
-                         <h2 className="font-bold text-lg py-4">Feedback</h2>
-                         <input {...register('feedback',{required:true})} type="text" className="border-2"/><br /> 
-                         <h2 className="font-bold text-lg py-4">Delivery Men ID</h2>
-                         <input {...register('deliveryMenId',{required:true})} type="text" defaultValue={selectedDeliveryMenId} readOnly/><br /> 
-                         <input type="submit" value="Submit" className='btn btn-sm btn-secondary ml-5'/>                       
+
+                         {/* Feedback */}
+                         <h2 className="block text-lg font-medium text-gray-700 mb-2">Feedback</h2>
+                         <input {...register('feedback',{required:true})} type="text" className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-gray-100 text-gray-800"
+                         /><br 
+
+                         /> 
+
+                      {/* deliveryman Id */}
+                         <h2 className="block text-lg font-medium text-gray-700 mb-2">Delivery Men ID</h2>
+                         <input {...register('deliveryMenId',{required:false})} type="text" defaultValue={selectedDeliveryMenId} readOnly
+                         
+                         className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-6 bg-gray-100 text-gray-800"
+                         /><br /> 
+                         <input type="submit" value="Submit"   className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-600 transition duration-300"
+                         
+                         
+                         />                       
                      </form> 
                      <div className="modal-action">
                      <form method="dialog">
