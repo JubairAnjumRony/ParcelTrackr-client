@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const QuesAns = () => {
      
@@ -53,6 +54,10 @@ const QuesAns = () => {
           }
       ];
     return (
+        <>
+        <Helmet>
+						 <title> ParcelTrackr || Q&A</title>
+					 </Helmet>
         <div className="max-w-2xl mx-auto p-6 bg-gray-50 rounded-xl shadow-xl my-6 ">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-6 ">FAQs</h1>
         <div className="space-y-4">
@@ -92,6 +97,8 @@ const QuesAns = () => {
           ))}
         </div>
       </div>
+
+      </>
     )
 }
 
