@@ -186,7 +186,7 @@ const AllParcel = () => {
                                                 }
                                                 className="form-control bg-base-100 rounded-lg p-10 border-2"
                                             >
-                                                <h2 className="text-2xl font-bold">
+                                                <h2 className="text-2xl font-bold text-blue-300 ">
                                                     Manage Parcel
                                                 </h2>
                                                 <div className="p-5">
