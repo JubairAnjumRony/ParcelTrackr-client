@@ -95,7 +95,7 @@ const Navbar = () => {
 				
 			</li>
 			<li>
-				<Link to="/dashboard/cart">
+				<Link to="/notification">
 					<div className="flex">
 						<IoNotificationsOutline className="mr-2 text-2xl"></IoNotificationsOutline>
 						<div className="badge badge-secondary">+</div>
