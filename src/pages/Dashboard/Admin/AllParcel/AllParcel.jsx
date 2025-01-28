@@ -190,10 +190,11 @@ const AllParcel = () => {
                                                     Manage Parcel
                                                 </h2>
                                                 <div className="p-5">
-                                                    <label className="font-bold mb-2">
+                                                    <label className="font-bold mb-2  text-lg ">
                                                         Assign Delivery Man:
                                                     </label>
                                                     <select
+                                                      className="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 bg-white text-gray-800"
                                                         value={selectedDeliveryMan}
                                                         onChange={(e) =>
                                                             setSelectedDeliveryMan(
@@ -216,10 +217,11 @@ const AllParcel = () => {
                                                         )}
                                                     </select>
                                                     <div className="mt-2">
-                                                        <label className="font-bold">
+                                                        <label className="font-bold text-lg  mb-2">
                                                             Approximate Delivery Date:
                                                         </label>
                                                         <input
+                                                          className="w-full border border-gray rounded-xl px-4 py-2 mb-6 bg-gray-400 text-gray-600"
                                                             type="date"
                                                             min={now}
                                                             value={deliveryDate}
