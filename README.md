@@ -50,40 +50,20 @@ An advanced and dynamic Parcel Management System built using the MERN stack. Thi
 
 ---
 
-## Tech Stack
+## 🛠️ Technology Stack  
 
-- **Frontend**: React, React Router, Axios, TailwindCSS
-- **Backend**: Node.js, Express.js, MongoDB
-- **Payment Integration**: Stripe
-- **Authentication**: Firebase
-- **Data Management**: React Query (TanStack Query)
+| Category           | Technologies Used |
+|-------------------|------------------|
+| **Frontend**     | React, React Router, Axios, TailwindCSS |
+| **Backend**      | Node.js, Express.js, MongoDB |
+| **Authentication** | Firebase Authentication |
+| **Payments**     | Stripe |
+| **State Management** | React Query (TanStack Query) |
+| **Data Visualization** | ApexCharts |
 
 ---
-
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/parcel-management-system.git
-Navigate to the project directory:
-bash
-Copy
-Edit
-cd parcel-management-system
-Install dependencies:
-bash
-Copy
-Edit
-npm install
-Start the development server:
-bash
-Copy
-Edit
-npm run dev
-Dependencies
-json
-Copy
-Edit
+## 📜 Dependencies  
+```json
 "dependencies": {
   "@stripe/react-stripe-js": "^3.1.1",
   "@stripe/stripe-js": "^5.5.0",
@@ -108,8 +88,82 @@ Edit
   "sort-by": "^0.0.2",
   "sweetalert2": "^11.15.10"
 }
-Future Improvements
-Add real-time chat between users and delivery personnel.
-Implement AI-driven parcel route optimization.
-Introduce parcel insurance and advanced tracking features.
-Feel free to contribute by creating pull requests or reporting issues. Happy coding!
+```
+
+---
+
+## 🛠 Installation & Setup  
+
+### **Prerequisites**  
+- Node.js (>= 18)  
+- MongoDB Database  
+- Firebase Authentication  
+- Stripe Account  
+
+### **Steps**  
+
+#### 1️⃣ Clone the repository  
+```sh
+git clone https://github.com/your-repo/parcel-management-system.git
+cd parcel-management-system
+```
+
+#### 2️⃣ Install dependencies  
+```sh
+npm install
+```
+
+#### 3️⃣ Set up environment variables (see `.env.example` below)  
+
+#### 4️⃣ Start the development server  
+```sh
+npm run dev
+```
+
+---
+
+## ⚙️ Configuration (`.env`)  
+Create a `.env` file in the root directory and configure the following:
+
+```env
+# Firebase Authentication
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
+
+# MongoDB Configuration
+MONGODB_URI=your_mongodb_connection_url
+
+# Stripe API Keys
+STRIPE_SECRET_KEY=your_stripe_secret_key
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+
+# Server Configuration
+NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+```
+
+🚨 **Important:** Never expose your `.env` file in public repositories. Add it to `.gitignore` to keep it secure.
+
+---
+
+## 🚀 Future Improvements  
+
+🔹 **Real-time Chat** – Enable chat between users and delivery personnel.  
+🔹 **AI-Driven Route Optimization** – Optimize parcel delivery routes with AI.  
+🔹 **Parcel Insurance** – Introduce insurance options for parcel security.  
+🔹 **Advanced Tracking** – Improve live tracking accuracy and analytics.  
+
+
+---
+
+## 🤝 Contributing  
+Feel free to contribute by creating pull requests or reporting issues. Happy coding! 🚀  
+
+---
+## Live Site URL
+[Parcel Management System](https://parceltrackr-24489.web.app/)
+---
+🚀 **Enjoy seamless parcel booking and tracking with Parcel Management System!** 📦📍
