@@ -5,3 +5,17 @@
 body {
   @apply font-inter;
 }
+
+@layer base {
+  html[data-theme="light"] {
+    --text-color: #111827; /*Dark Gray for Light Mode */
+  }
+  html[data-theme="dark"] {
+    --text-color: #e1e5ef; /* Soft White for Dark Mode */
+    --bg-color: #0f182c;
+  }
+  body {
+    color: var(--text-color);
+     background-color: var(--bg-color);
+  }
+}

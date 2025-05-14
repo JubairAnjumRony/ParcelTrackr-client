@@ -4,9 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["poppins", "sans-serif"],
+        inter: ["Lato", "sans-serif"],
       },
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require("daisyui")],
+  darkMode: ['class', 'html[data-theme="dark"]'],
+  daisyui: {
+    theme: ["light", "dark"],
+  },
 };

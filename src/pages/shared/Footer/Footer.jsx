@@ -4,7 +4,7 @@ import logo from '../../../assets/ParcelTrackr_Logo.jpg';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center bg-blue-300 text-base-content rounded p-2">
+        <footer className="footer footer-center bg-blue-300 dark:bg-gray-800 text-base-content rounded p-2">
           <div className='flex justify-between mt-2 text-white'>
              <div>
                <img className="w-11 h-11 rounded-full" src={logo} alt="" /> 

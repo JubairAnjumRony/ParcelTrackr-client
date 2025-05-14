@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import useAuth from "../../hooks/useAuth";
-import signUp from "../../assets/login1.jpg";
+import signUp from "../../assets/login2.png";
 import { useState } from "react";
 
 
@@ -297,9 +297,9 @@ const SignUp = () => {
                                 </button>
                             </div>
                         </form>
-                        <p className="text-center">
+                        <p className="pl-8">
                             <small>
-                                Already have an account? <Link to="/login">Login</Link>
+                                Already have an account ? <Link to="/login"><span className="text-blue-500">Login</span></Link>
                             </small>
                         </p>
                         <SocialLogin />

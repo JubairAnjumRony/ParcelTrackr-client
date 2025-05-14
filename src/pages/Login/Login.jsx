@@ -176,8 +176,8 @@ finally {
                                 </button>
                             </div>
                         </form>
-                        <p className='text-center text-xl text-blue-400'><small>New Here{''}<span className='text-red-400 pl-2 pr-2'>?</span> <Link to="/signup"> Create an account</Link> </small></p>
-                        <SocialLogin></SocialLogin>
+                        <p className='pl-10 text-xl text-blue-400'><small>New Here{''}<span className='text-red-400 pl-2 pr-2'>?</span> <Link to="/signup"> Create an account</Link> </small></p>
+                        <SocialLogin ></SocialLogin>
                     </div>
                 </div>
             </div>

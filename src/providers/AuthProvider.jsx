@@ -18,6 +18,32 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
+
+    // dark mode 
+    
+    const [theme,setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+  
+const handleToggle = (e) =>{
+  if(e.target.checked) {
+    setTheme("dark");
+  }else{
+    setTheme("light");
+  }
+}
+
+useEffect(()=>{
+    localStorage.setItem("theme",theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme",localTheme);
+
+    if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    
+  },[theme]);
+    
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
@@ -83,7 +109,7 @@ const AuthProvider = ({ children }) => {
         signIn,
         googleSignIn,
         logOut,
-        updateUserProfile
+        updateUserProfile,handleToggle,theme,
     }
 
     return (

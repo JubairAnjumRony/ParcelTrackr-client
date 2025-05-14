@@ -67,7 +67,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="testimonial-card bg-white rounded-lg shadow-md p-6 h-56">
+              <div className="testimonial-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 h-56">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}

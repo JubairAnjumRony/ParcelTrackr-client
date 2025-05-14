@@ -199,11 +199,11 @@ const Profile = () => {
     <Helmet>
 						 <title>Dashboard || MyProfile</title>
 					 </Helmet>
-    <div className="text-center bg-slate-200 min-h-screen">
-      <h1 className="text-4xl text-sky-500 mb-8">My Profile</h1>
+    <div className="text-center  bg-slate-200 min-h-screen rounded-xl pb-4">
+      <h1 className="text-4xl text-sky-500 mb-8 pt-5 underline">My Profile</h1>
 
-      <div className="card w-96 bg-base-100 shadow-xl mx-auto">
-        <div className="avatar mx-auto mt-14">
+      <div className="card w-96 bg-base-100 shadow-xl mx-auto pb-4">
+        <div className="avatar mx-auto  mt-14">
           <div className="w-36 rounded-full overflow-hidden mx-auto">
             <img
               src={user.photoURL}
@@ -250,7 +250,7 @@ const Profile = () => {
             </div>
 
             {/* Update Button */}
-            <button className="btn bg-sky-500 text-white">
+            <button className="btn bg-sky-500 text-white ">
               Update Profile <MdOutlineEdit />
             </button>
           </form>

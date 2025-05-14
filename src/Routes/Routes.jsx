@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../pages/Home/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
@@ -25,134 +22,116 @@ import Payment from "../pages/Dashboard/Users/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/Users/Payment/PaymentHistory";
 import QuesAns from "../pages/Notification/QuesAns";
 
-
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement:<ErrorPage></ErrorPage>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path:'notification',
-            element:<QuesAns></QuesAns>
-        },
-       
-        {
-          path: 'login',
-          element: <Login></Login>
-        },
-        {
-          path: 'signup',
-          element: <SignUp></SignUp>
-        },
-    
-      ]
-    },
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "notification",
+        element: <QuesAns></QuesAns>,
+      },
 
-    {
-		path: "dashboard",
-		element: (
-			<PrivateRoute>
-				<Dashboard></Dashboard>
-			</PrivateRoute>
-		),
-		errorElement: <ErrorPage></ErrorPage>,
-		children: [
-			// user routes
-    {
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <SignUp></SignUp>,
+      },
+    ],
+  },
+
+  {
+    path: "dashboard",
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      // user routes
+      {
         path: "bookAParcel",
         element: <BookParcel></BookParcel>,
-    },
-    {
+      },
+      {
         path: "myParcel",
         element: <MyPercel></MyPercel>,
-    },
-    {
+      },
+      {
         path: "updateParcels/:id",
         element: <UpdateParcel></UpdateParcel>,
         loader: ({ params }) =>
-            fetch(
-                `https://percel-trackr-server.vercel.app/parcels/${params.id}`
-            ),
-    },
-    {
+          fetch(`http://localhost:5000/parcels/${params.id}`),
+      },
+      {
         path: "myProfile",
         element: <MyProfile></MyProfile>,
-      
       },
-    {
-      path:"payments/:id",
-      element:<Payment></Payment>,
-      loader: ({ params }) =>
-        fetch(
-            `https://percel-trackr-server.vercel.app/parcels/${params.id}`
-        ),
+      {
+        path: "payments/:id",
+        element: <Payment></Payment>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/parcels/${params.id}`),
+      },
+      { path: "paymenthistory", element: <PaymentHistory /> },
 
-    },
-    {path:"paymenthistory",
-      element:<PaymentHistory/>
-    },
-
-    // admin routes
-    {
+      // admin routes
+      {
         path: "statistics",
         element: (
-         
           <AdminRoute>
             <Statistics></Statistics>
-            </AdminRoute>
-        )
-           
-    },
-    {
+          </AdminRoute>
+        ),
+      },
+      {
         path: "allParcel",
         element: (
-        
           <AdminRoute>
-               <AllParcel></AllParcel>
+            <AllParcel></AllParcel>
           </AdminRoute>
-         
         ),
-    },
-    {
+      },
+      {
         path: "allUser",
         element: (
-        
-           <AdminRoute><AllUsers></AllUsers></AdminRoute>
-           
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
         ),
-    },
-    {
+      },
+      {
         path: "allDeliveryMen",
-        element: (
-                 
-                <AllDeliveryMen> </AllDeliveryMen>
-           
-        ),
-    },
+        element: <AllDeliveryMen> </AllDeliveryMen>,
+      },
 
-    // deliverymen routes
-    {
+      // deliverymen routes
+      {
         path: "myDelivery",
         element: (
-     
-            <DeliveryMenRoute><MyDelivery></MyDelivery></DeliveryMenRoute>
-         
+          <DeliveryMenRoute>
+            <MyDelivery></MyDelivery>
+          </DeliveryMenRoute>
         ),
-    },
-    {
+      },
+      {
         path: "myReviews",
         element: (
-         
-          <DeliveryMenRoute> <MyReviews></MyReviews></DeliveryMenRoute>
-           
+          <DeliveryMenRoute>
+            {" "}
+            <MyReviews></MyReviews>
+          </DeliveryMenRoute>
         ),
-    },
-
-      ]
-    }
-  ]);
+      },
+    ],
+  },
+]);

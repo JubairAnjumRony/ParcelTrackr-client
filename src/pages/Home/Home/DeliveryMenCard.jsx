@@ -34,8 +34,8 @@ const DeliveryMenCard = ({deliveryMen}) => {
       className="rounded-lg w-full h-[400px] object-cover shadow-md "
     />
   </figure>
-  <div className="card-body bg-white text-center p-6 rounded-b-2xl">
-    <h2 className="card-title text-xl font-semibold text-gray-800">
+  <div className="card-body bg-white dark:bg-gray-800 text-center p-6 rounded-b-2xl">
+    <h2 className="card-title text-xl font-semibold ">
       Name: {name}
     </h2>
     <p className="text-xl text-left text-gray-600 mt-2">Delivered: {parcelCount}</p>

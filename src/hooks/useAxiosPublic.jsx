@@ -1,13 +1,12 @@
 import axios from "axios";
 
-
-
- const AxiosPublic = axios.create({
-    baseURL: 'https://percel-trackr-server.vercel.app'
-})
+const AxiosPublic = axios.create({
+  baseURL: "http://localhost:5000",
+});
 
 const useAxiosPublic = () => {
   return AxiosPublic;
 };
 
 export default useAxiosPublic;
+// https://percel-trackr-server.vercel.app

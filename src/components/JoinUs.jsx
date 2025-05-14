@@ -10,7 +10,7 @@ const JoinUs = () => {
   return (
     <section className="bg-stock text-white py-16 px-6  ">
       <div
-        className=" w-3/4 mx-auto text-center flex justify-center items-center"
+        className="w-3/4 mx-auto text-center  md:flex justify-between items-center"
         data-aos="fade-up "
       >
         <div>
@@ -21,12 +21,13 @@ const JoinUs = () => {
           />
         </div>
 
-        <div>
+        <div className="ml-8">
           <h2 className="text-4xl font-bold mb-4 text-gray-800">
             Join Our Community
           </h2>
-          <p className="mb-6 text-lg">
-            Be a part of our growing network and experience seamless parcel
+          <p className="mb-6 text-lg text-gray-600">
+            Be a part of our growing network 
+            <br></br>and experience seamless parcel
             management.
           </p>
           <ul className="mb-6 text-lg space-y-2  text-gray-700">

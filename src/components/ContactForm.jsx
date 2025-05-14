@@ -40,7 +40,7 @@ const ContactForm = () => {
       >
         {/* Left Section */}
         <div data-aos="fade-right">
-          <h3 className="text-gray-500 uppercase tracking-wide text-sm mb-5">
+          <h3 className="text-gray-500 dark:text-white uppercase tracking-wide text-sm mb-5">
             Get in touch
           </h3>
           <h1 className="text-4xl font-bold leading-tight my-4 text-gray-500">
@@ -98,7 +98,7 @@ const ContactForm = () => {
 
         {/* Right Section */}
         <div
-          className=" p-8 rounded-lg shadow-lg dark:bg-gray-900"
+          className="bg-gray-800 p-8 rounded-lg shadow-lg dark:bg-gray-900"
           data-aos="fade-bottom"
         >
           <h2 className="text-2xl font-bold mb-4">Send us a message</h2>
