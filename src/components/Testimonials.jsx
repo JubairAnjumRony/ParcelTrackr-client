@@ -48,8 +48,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials py-10">
-      <div className="container mx-auto text-center">
+    <section className="testimonials py-10 mx-6 md:mx-0">
+      <div className="container mx-auto text-center mb-2">
         <h2 className="text-3xl text-[#578FCA] font-bold mb-6">
           What Our Users Say
         </h2>
@@ -67,7 +67,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="testimonial-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 h-56">
+              <div className="testimonial-card bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 h-56">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -78,7 +78,7 @@ const Testimonials = () => {
                   {"★".repeat(testimonial.rating)}
                   {"☆".repeat(5 - testimonial.rating)}
                 </p>
-                <p className="text-gray-600 mt-4">{testimonial.comment}</p>
+                <p className=" mt-2 mb-6 ">{testimonial.comment}</p>
               </div>
             </SwiperSlide>
           ))}

@@ -58,8 +58,8 @@ const QuesAns = () => {
         <Helmet>
 						 <title> ParcelTrackr || Q&A</title>
 					 </Helmet>
-        <div className="max-w-2xl mx-auto p-6 bg-gray-50 rounded-xl shadow-xl my-6 ">
-        <h1 className="text-2xl font-bold text-gray-800 text-center mb-6 ">FAQs</h1>
+        <div className="max-w-2xl mx-auto p-6 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-xl my-6 ">
+        <h1 className="text-2xl font-bold  text-center mb-6 ">FAQs</h1>
         <div className="space-y-4">
           {questionsAndAnswers.map((item, index) => (
             <div
@@ -68,9 +68,9 @@ const QuesAns = () => {
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full flex justify-between items-center px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-300"
+                className="w-full flex justify-between items-center px-4 py-3 bg-gray-100 dark:bg-gray-600 hover:bg-blue-200  transition duration-300"
               >
-                <span className="text-gray-800 font-medium">{item.question}</span>
+                <span className=" font-medium">{item.question}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-5 w-5 transform transition-transform duration-300 ${
@@ -89,7 +89,7 @@ const QuesAns = () => {
                 </svg>
               </button>
               {activeIndex === index && (
-                <div className="px-4 py-3 bg-white text-gray-600">
+                <div className="px-4 py-4 ">
                   {item.answer}
                 </div>
               )}

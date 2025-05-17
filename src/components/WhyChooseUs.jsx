@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
           <h2 className="text-4xl font-bold mb-4 text-black dark:text-white">
             Why Choose Us?
           </h2>
-          <p className="mb-6 text-lg text-gray-700">
+          <p className="mb-6 text-lg text-gray-600">
             We provide the fastest and most secure parcel management solutions.
             Join us and enjoy seamless shipping experiences.
           </p>

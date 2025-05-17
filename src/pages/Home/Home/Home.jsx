@@ -378,7 +378,7 @@ const Home = () => {
           <span className="relative">World Class Services</span>
         </span>
       </h2>
-      <p className="text-gray-700 text-base md:text-lg mt-2">
+      <p className=" text-base md:text-lg mt-2">
         Let us deliver for you
       </p>
     </div>

@@ -1,6 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import useDeliveryMen from "../hooks/useDeliveryMen";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 
 const DeliveryMenRoute = ( {children}) => {
@@ -9,7 +10,7 @@ const DeliveryMenRoute = ( {children}) => {
 	// console.log(isDeliveryMen);
 	const location = useLocation();
 	if (loading || isDeliveryMenLoading) {
-		return <progress className="progress w-56"></progress>;
+		return <LoadingSpinner/>
 	}
 	if (user && isDeliveryMen) {
 		return children;

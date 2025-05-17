@@ -199,7 +199,7 @@ const Profile = () => {
     <Helmet>
 						 <title>Dashboard || MyProfile</title>
 					 </Helmet>
-    <div className="text-center  bg-slate-200 min-h-screen rounded-xl pb-4">
+    <div className="text-center  bg-slate-200 dark:bg-gray-600 min-h-screen rounded-xl pb-4">
       <h1 className="text-4xl text-sky-500 mb-8 pt-5 underline">My Profile</h1>
 
       <div className="card w-96 bg-base-100 shadow-xl mx-auto pb-4">

@@ -124,7 +124,7 @@ const Navbar = () => {
   );
   return (
     <div className="w-full bg-blue-300 dark:bg-gray-800 top-0 z-50 sticky shadow-md">
-      {/* ToDo: make the navbar sticky  */}
+
       <div className="navbar md:w-3/4 mx-auto text-white ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -173,7 +173,7 @@ const Navbar = () => {
             alt=""
             // className="w-20 mr-20 h-20"
           />
-          <Link to="/">ParcelTrackr </Link>
+          {/* <Link to="/">ParcelTrackr </Link> */}
           {/* <a className="btn btn-ghost  text-xl lg:text-3xl absolute ml-12  mt-2">
 					ParcelTrackr
 					</a> */}
@@ -187,7 +187,7 @@ const Navbar = () => {
             onChange={handleToggle}
             checked={theme === "dark" ? true : false}
             value="synthwave"
-            className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1 mr-2"
+            className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1 mr-2 duration-300"
           />
           <Tooltip id="my-tooltip" />
 

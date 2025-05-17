@@ -79,7 +79,7 @@ const MyPercel = () => {
           <Helmet>
 						 <title>Dashboard || MyParcels</title>
 					 </Helmet>
-        <div className="p-4 bg-gray-50 min-h-screen">
+        <div className="p-4  min-h-screen">
         {/* Filter Dropdown */}
         <div className="mb-4">
             <label htmlFor="filter" className="text-sm font-medium text-gray-600 mr-2">
@@ -89,7 +89,7 @@ const MyPercel = () => {
                 id="filter"
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="px-3 py-2 border rounded-md text-gray-700 focus:ring focus:ring-blue-300"
+                className="px-3 py-2 border rounded-md focus:ring focus:ring-blue-300"
             >
                 <option value="All">All</option>
                 <option value="pending">Pending</option>
@@ -100,12 +100,12 @@ const MyPercel = () => {
         </div>
 
 
-		<div className="p-4 bg-gray-50 min-h-screen">
+		<div className="p-4  min-h-screen">
     <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-200">
-        <table className="table-auto w-full text-left bg-white">
+        <table className="table-auto w-full text-left bg-whit">
              {/* Table Header */}
-            <thead className="bg-gray-100">
-                <tr className="text-sm text-gray-700 uppercase">
+            <thead className="">
+                <tr className="text-sm uppercase">
                     <th className="px-4 py-2">Index</th>
                     <th className="px-4 py-2">Parcel Type</th>
                     <th className="px-4 py-2">Requested Delivery Date</th>
@@ -116,7 +116,7 @@ const MyPercel = () => {
                     <th className="px-4 py-2">Actions</th>
                 </tr>
             </thead>
-            <tbody className="text-sm text-gray-600 divide-y divide-gray-200">
+            <tbody className="text-sm  divide-y divide-gray-200">
                 {filteredParcels.map((item, index) => (
                     <tr key={item._id} className="hover:bg-gray-50">
                         <td className="px-4 py-2">{index + 1}</td>

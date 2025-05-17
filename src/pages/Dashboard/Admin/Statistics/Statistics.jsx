@@ -229,15 +229,15 @@ const Statistics = () => {
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Monthly Overview</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                        <div className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg">
                             <h4 className="text-sm font-medium text-gray-500">Most Popular Day</h4>
                             <p className="text-xl font-semibold mt-1">Wednesday</p>
                         </div>
-                        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                        <div className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg">
                             <h4 className="text-sm font-medium text-gray-500">Peak Hour</h4>
                             <p className="text-xl font-semibold mt-1">2:00 - 4:00 PM</p>
                         </div>
-                        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                        <div className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg">
                             <h4 className="text-sm font-medium text-gray-500">Delivery Success Rate</h4>
                             <p className="text-xl font-semibold mt-1">98.2%</p>
                         </div>

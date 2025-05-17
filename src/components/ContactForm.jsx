@@ -39,7 +39,7 @@ const ContactForm = () => {
         data-aos="fade-up"
       >
         {/* Left Section */}
-        <div data-aos="fade-right">
+        <div data-aos="fade-right mx-0 md:mx-0">
           <h3 className="text-gray-500 dark:text-white uppercase tracking-wide text-sm mb-5">
             Get in touch
           </h3>
@@ -98,10 +98,10 @@ const ContactForm = () => {
 
         {/* Right Section */}
         <div
-          className="bg-gray-800 p-8 rounded-lg shadow-lg dark:bg-gray-900"
+          className=" p-8 rounded-lg shadow-lg bg-gray-700 dark:bg-gray-900"
           data-aos="fade-bottom"
         >
-          <h2 className="text-2xl font-bold mb-4">Send us a message</h2>
+          <h2 className="text-2xl font-bold mb-4 ">Send us a message</h2>
           <p className="text-gray-400 mb-6">
             Share your thoughts about the latest games, suggest improvements, or
             collaborate with ChilGam to revolutionize the gaming industry!
@@ -114,39 +114,39 @@ const ContactForm = () => {
                 name="name"
                 placeholder="Name*"
                 required
-                className="input input-bordered bg-gray-700 text-white w-full"
+                className="input input-bordered text-white w-full"
               />
               <input
                 type="text"
                 name="company"
                 placeholder="Company"
-                className="input input-bordered bg-gray-700 text-white w-full"
+                className="input input-bordered  text-white w-full"
               />
               <input
                 type="tel"
                 name="phone"
                 placeholder="Phone"
-                className="input input-bordered bg-gray-700 text-white w-full"
+                className="input input-bordered  text-white w-full"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email*"
                 required
-                className="input input-bordered bg-gray-700 text-white w-full"
+                className="input input-bordered text-white w-full"
               />
             </div>
             <input
               type="text"
               name="subject"
               placeholder="Subject"
-              className="input input-bordered bg-gray-700 text-white w-full mt-4"
+              className="input input-bordered  text-white w-full mt-4"
             />
             <textarea
               name="message"
               placeholder="Message*"
               required
-              className="textarea textarea-bordered bg-gray-700 text-white w-full mt-4"
+              className="textarea textarea-bordered text-white w-full mt-4"
             ></textarea>
             {/*  from-indigo-500 via-purple-500 to-pink-500 */}
             <button
