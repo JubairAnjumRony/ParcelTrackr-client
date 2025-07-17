@@ -133,6 +133,7 @@ const AllParcel = () => {
             className="input input-bordered w-full"
           />
         </div>
+        
         <div className="form-control">
           <label className="label">
             <span className="label-text">End Date</span>

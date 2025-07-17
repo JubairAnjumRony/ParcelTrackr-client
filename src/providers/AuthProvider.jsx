@@ -23,13 +23,17 @@ const AuthProvider = ({ children }) => {
     
     const [theme,setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
   
-const handleToggle = (e) =>{
-  if(e.target.checked) {
-    setTheme("dark");
-  }else{
-    setTheme("light");
-  }
-}
+// const handleToggle = (e) =>{
+//   if(e.target.checked) {
+//     setTheme("dark");
+//   }else{
+//     setTheme("light");
+//   }
+// }
+
+const handleToggle = () =>{
+    setTheme(prev =>(prev ==="light"? "dark": "light"))
+};
 
 useEffect(()=>{
     localStorage.setItem("theme",theme);

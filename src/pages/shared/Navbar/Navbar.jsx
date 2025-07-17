@@ -124,7 +124,6 @@ const Navbar = () => {
   );
   return (
     <div className="w-full bg-blue-300 dark:bg-gray-800 top-0 z-50 sticky shadow-md">
-
       <div className="navbar md:w-3/4 mx-auto text-white ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -152,7 +151,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="lg:flex items-center hidden relative">
-            <img className="w-12 rounded-full" src={logo} alt="" width={150} />
+            <img className="w-12 " src={logo} alt="" width={150} />
             <Link
               to="/"
               className=" pl-2 text-xl lg:text-2xl absolute ml-12  mt-2"
@@ -180,7 +179,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <input
+          {/* <input
             data-tooltip-id="my-tooltip"
             data-tooltip-content="Click to Toggle theme!"
             type="checkbox"
@@ -224,7 +223,50 @@ const Navbar = () => {
             >
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
-          )}
+          )} */}
+
+          <div
+            onClick={handleToggle}
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Click to Toggle theme!"
+            className="cursor-pointer transition-all duration-300 ease-in-out"
+          >
+            {theme === "light" ? (
+              // Sun icon (Light Mode)
+              <svg
+                className="stroke-base-content fill-base-content"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+              </svg>
+            ) : (
+              // Moon icon (Dark Mode)
+              <svg
+                className="stroke-base-content fill-base-content"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            )}
+          </div>
+          <Tooltip id="my-tooltip" />
 
           {/* <svg
             className="stroke-base-100 fill-base-100 col-start-1 row-start-1"
